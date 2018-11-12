@@ -1,0 +1,41 @@
+State Maintanance - Class Component
+Information with JSX - Functional Component
+
+Functional Component: 
+
+    const App = (event) => {
+        return (
+            <div>
+                <SearchBar />
+            </div>
+        );
+    }
+
+Class Component:
+
+    class App extends React.Component {
+        constructor(props){ // calls when class` instance created.
+            super(props);
+
+            this.state = { something: '' };
+        }
+
+        @method videoSearch with setState
+
+        videoSearch(term) {
+            this.setState({ something: 'typed one' });
+        }
+
+        render(){ // calls when Component`s state changes.
+            return (
+                <div>
+                    <SearchBar />
+                </div>
+            );
+        }
+    }
+
+    React - Component Level State
+    Redux - Application Level State
+
+    
